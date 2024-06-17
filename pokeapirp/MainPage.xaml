@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pokeapirp.MainPage"
+             BackgroundColor="#f0f0f0">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout VerticalOptions="StartAndExpand" Margin="20">
+
+                <ListView x:Name="ListaPokemones" ItemsSource="{Binding listado_pokemones}" ItemSelected="VerInfoPokemon"
+                          BackgroundColor="#ffffff" Margin="0,20"
+                          HasUnevenRows="True"
+                          SeparatorColor="#cccccc"
+                          SeparatorVisibility="Default"
+                          >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="10" Margin="5" CornerRadius="10" BackgroundColor="#ffffff" HasShadow="True">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Column="1"
+                                               Text="{Binding name}"
+                                               TextColor="#007AFF"
+                                               FontAttributes="Bold"
+                                               FontSize="18"
+                                               VerticalOptions="Center" />
+
+                                        <Label Grid.Row="1"
+                                               Grid.Column="1"
+                                               Text="{Binding url}"
+                                               TextColor="#8e8e93"
+                                               FontAttributes="None"
+                                               FontSize="14"
+                                               VerticalOptions="End" />
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                    <ListView.Footer>
+                        <StackLayout HeightRequest="50"/>
+                    </ListView.Footer>
+
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="pokeapirp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:pokeapirp"
+    Shell.FlyoutBehavior="Disabled"
+    Title="pokeapirp"
+    BackgroundColor="#f0f0f0"
+    Shell.NavBarIsVisible="True"
+    Shell.BackgroundColor="#ffffff"
+    Shell.ForegroundColor="#007AFF"
+    Shell.TitleColor="#007AFF"
+    Shell.DisabledColor="#cccccc"
+    Shell.UnselectedColor="#8e8e93"
+    Shell.TabBarBackgroundColor="#ffffff"
+    Shell.TabBarForegroundColor="#007AFF"
+    Shell.TabBarTitleColor="#007AFF"
+    Shell.TabBarUnselectedColor="#8e8e93">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"
+        Icon="home_icon.png" />
+</Shell>
+
