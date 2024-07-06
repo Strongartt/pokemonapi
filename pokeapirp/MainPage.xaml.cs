@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using pokeapirp.Models;
 using pokeapirp.Services;
 using System.Collections.Generic;
@@ -21,10 +22,18 @@ namespace pokeapirp
                 OnPropertyChanged();
             }
         }
+=======
+﻿namespace pokeapirp
+{
+    public partial class MainPage : ContentPage
+    {
+        int count = 0;
+>>>>>>> c3c03b5ca879b47539badb6ae365c12694b07382
 
         public MainPage()
         {
             InitializeComponent();
+<<<<<<< HEAD
             BindingContext = this;
             CargarData();
         }
@@ -51,4 +60,21 @@ namespace pokeapirp
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+=======
+        }
+
+        private void OnCounterClicked(object sender, EventArgs e)
+        {
+            count++;
+
+            if (count == 1)
+                CounterBtn.Text = $"Clicked {count} time";
+            else
+                CounterBtn.Text = $"Clicked {count} times";
+
+            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+    }
+
+>>>>>>> c3c03b5ca879b47539badb6ae365c12694b07382
 }

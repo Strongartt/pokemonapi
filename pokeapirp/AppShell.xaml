@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:pokeapirp"
     Shell.FlyoutBehavior="Disabled"
+<<<<<<< HEAD
     Title="pokeapirp"
     BackgroundColor="#f0f0f0"
     Shell.NavBarIsVisible="True"
@@ -17,11 +18,20 @@
     Shell.TabBarForegroundColor="#007AFF"
     Shell.TabBarTitleColor="#007AFF"
     Shell.TabBarUnselectedColor="#8e8e93">
+=======
+    Title="pokeapirp">
+>>>>>>> c3c03b5ca879b47539badb6ae365c12694b07382
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
+<<<<<<< HEAD
         Route="MainPage"
         Icon="home_icon.png" />
 </Shell>
 
+=======
+        Route="MainPage" />
+
+</Shell>
+>>>>>>> c3c03b5ca879b47539badb6ae365c12694b07382
